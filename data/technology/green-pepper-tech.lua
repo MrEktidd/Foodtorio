@@ -2,6 +2,7 @@ data:extend({
     {
         type = "technology",
         name = "green-pepper-tech",
+        prerequisites = {"automation-science-pack"}, 
         icon = "__foodtorio__/graphics/icons/green-pepper.png",
         icon_size = 500,
         effects = {

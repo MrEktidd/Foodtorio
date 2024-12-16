@@ -58,11 +58,12 @@ data:extend({
     }
 })
 
---TECH
+-- TECH
 data:extend({
     {
         type = "technology",
         name = "red-pepper-tech",
+        prerequisites = {"automation-science-pack"}, -- Changed to a table
         icon = "__foodtorio__/graphics/icons/red-pepper.png",
         icon_size = 500,
         effects = {

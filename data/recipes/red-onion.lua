@@ -62,6 +62,7 @@ data:extend({
     {
         type = "technology",
         name = "red-onion-tech",
+        prerequisites = {"automation-science-pack"}, 
         icon = "__foodtorio__/graphics/icons/red-onion.png",
         icon_size = 500,
         effects = {

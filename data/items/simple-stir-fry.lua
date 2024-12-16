@@ -94,6 +94,7 @@ data:extend({
     {
         type = "technology",
         name = "rusty-plate-tech", -- Renamed to avoid conflict
+        prerequisites = {"automation-science-pack"},
         icon = "__foodtorio__/graphics/icons/rusty-plate.png",
         icon_size = 500,
         effects = {

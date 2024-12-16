@@ -358,6 +358,7 @@ data:extend({
     {
         type = "technology",
         name = "tomato-tech",
+        prerequisites = {"automation-science-pack"}, 
         icon = "__foodtorio__/graphics/icons/tomato.png",
         icon_size = 500,
         effects = {
@@ -502,6 +503,7 @@ data:extend({
         type = "technology",
         name = "potato-chip-tech",
         icon = "__foodtorio__/graphics/icons/potato-chips.png",
+        prerequisites = {"basic-tomato-sauce-tech"},
         icon_size = 1024,
         effects = {
             {type = "unlock-recipe", recipe = "potato-chips"}
