@@ -85,7 +85,7 @@ data:extend({
     {
         type = "technology",
         name = "cutlery-tech", -- Renamed to avoid conflict
-        icon = "__foodtorio__/graphics/icons/cutlery.png",
+        icon = "__foodtorio__/graphics/icons/cutlery-tech.png",
         icon_size = 500,
         effects = {
             {type = "unlock-recipe", recipe = "fork"},

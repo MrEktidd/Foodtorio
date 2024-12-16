@@ -1,4 +1,19 @@
-ee---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2024-12-16
+  Bugfixes:
+    - Graphics fix
+  Changes:
+    - Tech locked all Foodtorio items, prerequisites may continue to be updated.
+    - Added item descriptions to most items
+    - f
+  Content Added:
+    - Added Liquid: Bulk Growth Medium
+    - Added Item: Vial of Growth Medium
+    - Added Item: Cultured Meat
+    - Added Recipe: Beef
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2024-12-15
   Bugfixes:
@@ -15,20 +30,16 @@ Date: 2024-12-15
     - Spoons
     - Plates	
 
-
-    
-     	
-
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2024-12-15
   Content Added:
-	-Raw Ground Beef
-	-Dried Black Pepper		-Ground Beef
-	-Salt and Pepper		-Vegetable and Spice Medley
-	-Basic Tomato Sauce		-Parmesan Cheese
-	-Gourmet Tomato Sauce		-Plate of Gourmet Spaghetti
-	-Tomato Paste
+	- Raw Ground Beef
+	- Dried Black Pepper		-Ground Beef
+	- Salt and Pepper		-Vegetable and Spice Medley
+	- Basic Tomato Sauce		-Parmesan Cheese
+	- Gourmet Tomato Sauce		-Plate of Gourmet Spaghetti
+	- Tomato Paste
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4

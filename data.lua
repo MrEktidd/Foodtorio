@@ -25,8 +25,7 @@ require("data.items.farming-science-pack")
 require("data.items.cooking-science-pack")
 require("data.items.simple-stir-fry")
 require("data.items.cutlery")
-
-
+require("data.items.growth-medium")
 
 --Recipes
 require("data.recipes.algae")
