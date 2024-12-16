@@ -64,3 +64,39 @@ data:extend({
         name = "pot"
     }
 })
+data:extend({
+    {
+        type = "recipe-category",
+        name = "crafting-with-fluid-or-metallurgy"
+    }
+})
+
+
+local RecipeCategory = {
+    "fermentation",
+    "fruit_plant",
+    "juice",
+    "jam",
+    "bbq",
+    "pie",
+    "pot",
+    "icecream",
+    "oven",
+    "agitator",
+    "grinder",
+    "press",
+    "husker",
+    "washer",
+}
+
+for index, name in ipairs(RecipeCategory) do
+    data:extend {
+        {
+            type = "recipe-category",
+            name = name,
+            order = "f" .. string.format("%03d", index)
+        },
+    }
+end
+
+

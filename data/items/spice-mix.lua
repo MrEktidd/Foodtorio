@@ -196,6 +196,7 @@ data:extend({
             {type = "item", name = "dried-oregano", amount = 100},
             {type = "item", name = "dried-basil", amount = 100},
             {type = "item", name = "dried-parsley", amount = 100},
+            {type = "item", name = "garlic", amount = 2},
 
         },
         results = {
@@ -229,7 +230,9 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                {"automation-science-pack", 1}
+                {"automation-science-pack", 1},
+                {"farming-science-pack", 1}
+
             },
             time = 30
         },
@@ -251,7 +254,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                {"automation-science-pack", 1}
+                {"automation-science-pack", 1},
+                {"farming-science-pack", 1}
             },
             time = 30
         },
@@ -273,7 +277,8 @@ data:extend({
         unit = {
             count = 200,
             ingredients = {
-                {"automation-science-pack", 1}
+                {"automation-science-pack", 1},
+                {"farming-science-pack", 1}
             },
             time = 30
         },
@@ -297,7 +302,8 @@ data:extend({
             count = 250,
             ingredients = {
                 {"automation-science-pack", 1},
-                {"logistic-science-pack", 1}
+                {"logistic-science-pack", 1},
+                {"farming-science-pack", 1}
             },
             time = 30
         },

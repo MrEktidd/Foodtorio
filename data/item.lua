@@ -6,7 +6,7 @@ data:extend({
         name = "potato-chips",
         icon = "__foodtorio__/graphics/potato-chips.png",
         icon_size = 1024, 
-        subgroup = "fruit_product", 
+        subgroup = "food-processing", 
         order = "a[potato-chips]",
         stack_size = 200
     }
@@ -19,7 +19,7 @@ data:extend({
         name = "spaghetti-noodles",
         icon = "__foodtorio__/graphics/spaghetti-noodles.png",
         icon_size = 500, 
-        subgroup = "fruit_product", 
+        subgroup = "food-processing", 
         order = "a[spaghetti-noodles]",
         stack_size = 200
     }
@@ -32,7 +32,7 @@ data:extend({
         name = "cooked-spaghetti",
         icon = "__foodtorio__/graphics/cooked-spaghetti.png",
         icon_size = 500, 
-        subgroup = "fruit_product", 
+        subgroup = "food-processing", 
         order = "a[cooked-spaghetti]",
         stack_size = 200
     }

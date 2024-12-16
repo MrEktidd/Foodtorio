@@ -1,3 +1,35 @@
+ee---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2024-12-15
+  Bugfixes:
+    - removed finely-crafted-machines as a dependency (may be added again in the future as needs arise)
+  Major Changes:
+    - Introduced 2 new science packs; Farming Science Packs and Cooking Science Packs. Chef Science Packs will follow in later versions.
+    - Assigned various recipes to associated machines
+    - Added science requirement for jams, ice-creams, juices, and pies.
+  Content Added:
+    - Farming & Cooking Science Packs
+    - Simple Stir Fry
+    - Forks
+    - Knives
+    - Spoons
+    - Plates	
+
+
+    
+     	
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2024-12-15
+  Content Added:
+	-Raw Ground Beef
+	-Dried Black Pepper		-Ground Beef
+	-Salt and Pepper		-Vegetable and Spice Medley
+	-Basic Tomato Sauce		-Parmesan Cheese
+	-Gourmet Tomato Sauce		-Plate of Gourmet Spaghetti
+	-Tomato Paste
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2024-12-15
@@ -17,8 +49,9 @@ Date: 2024-12-15
 	-Red Onion			-Dried Oregano
 	-Diced Red Onion		-Spice Mix
 	-Black Pepper			
-	-Dried Black Pepper
-	-Salt and Pepper
+	-Dried Black Pepper		
+	-Salt and Pepper				
+	
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2024-12-14

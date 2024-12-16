@@ -19,8 +19,12 @@ require("data.items.red-pepper")
 require("data.items.peppers-onions")
 require("data.items.spice-mix")
 require("data.items.salt-pepper")
-
-
+require("data.items.tomato-sauce")
+require("data.items.glass")
+require("data.items.farming-science-pack")
+require("data.items.cooking-science-pack")
+require("data.items.simple-stir-fry")
+require("data.items.cutlery")
 
 
 
@@ -64,10 +68,13 @@ require("data.technology.fermented-culture-tech")
 require("data.technology.brown-mushroom-tech")
 require("data.technology.green-pepper-tech")
 
+
+
+
 --Entities
 require("data.entities.biosphere")
 require("data.entities")
-
+require("data.entities.lab")
 
 --Categories
 require("data.recipe-categories.recipe-categories")
