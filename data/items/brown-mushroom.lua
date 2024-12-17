@@ -6,7 +6,7 @@ data:extend({
         icon_size = 500,
         stack_size = 50,
         subgroup = "food-processing",
-        order = "a[mineral-compound]"
+        order = "a[brown-mushroom]"
     }
 })
 
@@ -19,6 +19,7 @@ data:extend({
         icon_size = 500,
         stack_size = 50,
         subgroup = "food-processing",
-        order = "a[mineral-compound]"
+        order = "a[sliced-brown-mushroom]",
+        localised_description = {"", "Grants +20% science speed boost for 5 minutes. ", "Repeated use reduces effectiveness."}
     }
 })
