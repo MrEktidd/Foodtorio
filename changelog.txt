@@ -28,7 +28,7 @@ Date: 2024-12-15
     - Forks
     - Knives
     - Spoons
-    - Plates	
+    - Plates
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
@@ -48,10 +48,10 @@ Date: 2024-12-15
         - Fixed synthetic protein crafting issue
 	- Changed Thumbnail
 	- Added Foodtorio Crafting tab
-	
+
 
  Content Added:
-	-Brown Mushroom			-Peppers and Onions Mix		
+	-Brown Mushroom			-Peppers and Onions Mix
 	-Sliced Brown Mushroom		-Basil
 	-Green Pepper			-Dried Basil
 	-Chopped Green Pepper		-Parsley
@@ -59,10 +59,10 @@ Date: 2024-12-15
 	-Chopped Red Pepper		-Oregano
 	-Red Onion			-Dried Oregano
 	-Diced Red Onion		-Spice Mix
-	-Black Pepper			
-	-Dried Black Pepper		
-	-Salt and Pepper				
-	
+	-Black Pepper
+	-Dried Black Pepper
+	-Salt and Pepper
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2024-12-14
@@ -79,5 +79,3 @@ Date: 2024-12-14
 	-Moss			-Microbial Biomass
 	-Mineral Compound	-Fermented Culture
 	-			-Synthetic Protein
-    
----------------------------------------------------------------------------------------------------
