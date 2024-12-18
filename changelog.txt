@@ -4,8 +4,11 @@ Date: 2024-12-17
   Changes:
     - Added Russian translation - Thanks to PinnedFox
     - Research Changes
+    - Recipe Changes
+    - Graphics Fixes
+    - Formatting Fixes
   Content Added:
-    - Sushi Update! Now you can make sushi with sushi belts!
+    - Sushi Update! Now you can make sushi with sushi belts! 5 Types of rolls with more to come! 
     - Added Salmon, Smoked Salmon, Tuna, Smoked Tuna, Shrimp, Eel, Octopus, Squid, Roe, Crab, Crab Meat, Seaweed, Nori Sheets.
     - Added Mixed Sesame Seeds, Black Sesame Seeds, White Sesame Seeds, Ginger, Pickled Ginger, Yellowtail, Mackerel,
     - Added Salmon Roll, Tuna Roll, Shrimp Roll, California Roll, Eel Roll
@@ -19,7 +22,7 @@ Date: 2024-12-16
   Changes:
     - Tech locked all Foodtorio items, prerequisites may continue to be updated.
     - Added item descriptions to most items
-    - f
+    - Added Chinese translation - Thanks to Plex
   Content Added:
     - Added Liquid: Bulk Growth Medium
     - Added Item: Vial of Growth Medium
