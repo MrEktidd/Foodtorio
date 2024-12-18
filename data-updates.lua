@@ -13,17 +13,3 @@ for _, lab in pairs(data.raw["lab"]) do
     end
 end
 
---Fruit Machines lock
-for _, recipe in pairs(data.raw.recipe) do
-    if recipe.subgroup == "fruit_machine" then
-        recipe.enabled = false
-    end
-end
-
---Fruit Lock
-
-for _, recipe in pairs(data.raw.recipe) do
-    if recipe.subgroup == "fruit" then
-        recipe.enabled = false
-    end
-end

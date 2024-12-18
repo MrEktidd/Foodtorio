@@ -26,6 +26,9 @@ require("data.items.cooking-science-pack")
 require("data.items.simple-stir-fry")
 require("data.items.cutlery")
 require("data.items.growth-medium")
+require("data.items.sushi")
+require("data.items.sushiroll")
+
 
 --Recipes
 require("data.recipes.algae")
@@ -46,7 +49,7 @@ require("data.recipes.fermented-culture")
 require("data.recipes.brown-mushroom")
 require("data.recipes.green-pepper")
 require("data.recipes.red-onion")
-
+require("data.recipes.sushi")
 
 --Fluids
 require("data.fluids.nutrient-slurry")
@@ -66,7 +69,7 @@ require("data.technology.synthetic-protein-tech")
 require("data.technology.fermented-culture-tech")
 require("data.technology.brown-mushroom-tech")
 require("data.technology.green-pepper-tech")
-
+require("data.technology.sushi-tech")
 
 
 
@@ -79,3 +82,4 @@ require("data.entities.lab")
 require("data.recipe-categories.recipe-categories")
 
 require("data.addons")
+

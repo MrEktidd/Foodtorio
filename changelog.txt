@@ -1,11 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.7
-Date: 2024-12-16
+Version: 0.0.8
+Date: 2024-12-17
   Changes:
-    - 
-    - f
+    - Added Russian translation - Thanks to PinnedFox
+    - Research Changes
   Content Added:
-    - m
+    - Sushi Update! Now you can make sushi with sushi belts!
+    - Added Salmon, Smoked Salmon, Tuna, Smoked Tuna, Shrimp, Eel, Octopus, Squid, Roe, Crab, Crab Meat, Seaweed, Nori Sheets.
+    - Added Mixed Sesame Seeds, Black Sesame Seeds, White Sesame Seeds, Ginger, Pickled Ginger, Yellowtail, Mackerel,
+    - Added Salmon Roll, Tuna Roll, Shrimp Roll, California Roll, Eel Roll
 
 
 ---------------------------------------------------------------------------------------------------

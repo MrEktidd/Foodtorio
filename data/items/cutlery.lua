@@ -80,25 +80,4 @@ data:extend({
     }
 })
 
--- TECHNOLOGY
-data:extend({
-    {
-        type = "technology",
-        name = "cutlery-tech", -- Renamed to avoid conflict
-        icon = "__foodtorio__/graphics/icons/cutlery-tech.png",
-        icon_size = 500,
-        effects = {
-            {type = "unlock-recipe", recipe = "fork"},
-            {type = "unlock-recipe", recipe = "spoon"},
-            {type = "unlock-recipe", recipe = "knife"}
-        },
-        unit = {
-            count = 250,
-            ingredients = {
-                {"automation-science-pack", 1}
-            },
-            time = 30
-        },
-        order = "a-b-c"
-    }
-})
+
