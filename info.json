@@ -1,11 +1,11 @@
 {
     "name": "foodtorio",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "title": "Foodtorio",
     "author": "MrEktidd",
     "contact": "MrEktidd",
     "homepage": "https://mods.factorio.com/mod/foodtorio",
     "description": "THIS IS A WORK IN PROGRESS, LIMITED CONTENT SO FAR! Foodtorio is an overhaul mod feeding off of Fruit, Vegetables, and Animal Products by plexpt. So first big shout out to them for inspiring this!",
     "factorio_version": "2.0",
-    "dependencies": ["base >= 2.0", "fruit >= 1.5.12"]
+    "dependencies": ["base >= 2.0", "fruit >= 1.7.1"]
 } 

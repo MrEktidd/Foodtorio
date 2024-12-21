@@ -82,4 +82,5 @@ require("data.entities.lab")
 require("data.recipe-categories.recipe-categories")
 
 require("data.addons")
+require("food-data")
 
