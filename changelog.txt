@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2024-12-17
+  Changes:
+    - Removed redundant jam/juice technology lock
+    - .
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2024-12-17
+  Changes:
+    - Fixed missing Locales
+    - Removed double technology locks
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2024-12-17
   Changes:
@@ -50,34 +63,32 @@ Date: 2024-12-15
 Version: 0.0.5
 Date: 2024-12-15
   Content Added:
-	- Raw Ground Beef
-	- Dried Black Pepper		-Ground Beef
-	- Salt and Pepper		-Vegetable and Spice Medley
-	- Basic Tomato Sauce		-Parmesan Cheese
-	- Gourmet Tomato Sauce		-Plate of Gourmet Spaghetti
-	- Tomato Paste
+    - Raw Ground Beef
+    - Dried Black Pepper		-Ground Beef
+    - Salt and Pepper		-Vegetable and Spice Medley
+    - Basic Tomato Sauce		-Parmesan Cheese
+    - Gourmet Tomato Sauce		-Plate of Gourmet Spaghetti
+    - Tomato Paste
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2024-12-15
   Fixes:
         - Fixed synthetic protein crafting issue
-	- Changed Thumbnail
-	- Added Foodtorio Crafting tab
-
-
- Content Added:
-	-Brown Mushroom			-Peppers and Onions Mix
-	-Sliced Brown Mushroom		-Basil
-	-Green Pepper			-Dried Basil
-	-Chopped Green Pepper		-Parsley
-	-Red Pepper			-Dried Parsley
-	-Chopped Red Pepper		-Oregano
-	-Red Onion			-Dried Oregano
-	-Diced Red Onion		-Spice Mix
-	-Black Pepper
-	-Dried Black Pepper
-	-Salt and Pepper
+    - Changed Thumbnail
+    - Added Foodtorio Crafting tab
+  Content Added:
+    - Brown Mushroom			-Peppers and Onions Mix
+    - Sliced Brown Mushroom		-Basil
+    - Green Pepper			-Dried Basil
+    - Chopped Green Pepper		-Parsley
+    - Red Pepper			-Dried Parsley
+    - Chopped Red Pepper		-Oregano
+    - Red Onion			-Dried Oregano
+    - Diced Red Onion		-Spice Mix
+    - Black Pepper
+    - Dried Black Pepper
+    - Salt and Pepper
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
@@ -86,12 +97,12 @@ Date: 2024-12-14
     - Added thumbnail
 
   Content Added:
-    -Synthetic Protein production
+    - Synthetic Protein production
         -Crushed coal		-Electrolysis
-	-Crushed iron		-Hydrogen
-	-Crushed Copper		-Oxygen
-	-Gravel			-Boiled Water
-	-Algae			-Mineral Compound
-	-Moss			-Microbial Biomass
-	-Mineral Compound	-Fermented Culture
-	-			-Synthetic Protein
+    - Crushed iron		-Hydrogen
+    - Crushed Copper		-Oxygen
+    - Gravel			-Boiled Water
+    - Algae			-Mineral Compound
+    - Moss			-Microbial Biomass
+    - Mineral Compound	-Fermented Culture
+    - Synthetic Protein
