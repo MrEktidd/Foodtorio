@@ -1,36 +1,26 @@
 local extras = {}
 
 function extras.get_bonus(name, value)
-    -- Example function to calculate a bonus based on hunger value
-    local bonus
-    if name == "dairy" then
-        bonus = value * 0.5
-    elseif name == "fruits" then
-        bonus = value * 0.5
-    elseif name == "veggies" then
-        bonus = value * 0.5
-    elseif name == "carbs" then
-        bonus = value * 0.5
-    elseif name == "meat" then
-        bonus = value * 0.5
-    else
-        bonus = 0
+    local bonus = 0
+    if value >= 100 then
+        bonus = 0.5 -- 50% boost for a full bar
+    elseif value > 0 then
+        bonus = 0.5 * (value / 100) -- Proportional boost based on bar fill
     end
-    return math.floor(bonus * 10) / 10 -- Round to one decimal place
+    return bonus
 end
 
 function extras.get_stat_name(name)
-    -- Example function to get the stat name for a food group
     if name == "dairy" then
-        return "Health Bonus"
+        return "Mining Speed"
     elseif name == "fruits" then
-        return "Energy Boost"
+        return "Crafting Speed"
     elseif name == "veggies" then
-        return "Immunity Boost"
+        return "Research Speed"
     elseif name == "carbs" then
-        return "Speed Boost"
+        return "Health Bonus"
     elseif name == "meat" then
-        return "Strength Boost"
+        return "Running Speed"
     else
         return "Unknown"
     end
@@ -38,7 +28,7 @@ end
 
 function extras.apply_stat_bonuses(player, hunger)
     if not hunger then
-        hunger = global.player_hunger_data[player.index]
+        hunger = storage.player_hunger_data[player.index]
     end
 
     if not hunger then
@@ -50,9 +40,18 @@ function extras.apply_stat_bonuses(player, hunger)
         return -- Exit if player character is not available
     end
 
-    -- Apply bonuses based on hunger levels
-    player.character_running_speed_modifier = (hunger.carbs / 100) - 1
-    player.character_health_bonus = hunger.overall
+    -- Calculate and apply bonuses
+    local mining_speed_bonus = extras.get_bonus("dairy", hunger.dairy)
+    local crafting_speed_bonus = extras.get_bonus("fruits", hunger.fruits)
+    local research_speed_bonus = extras.get_bonus("veggies", hunger.veggies)
+    local health_bonus = extras.get_bonus("carbs", hunger.carbs)
+    local running_speed_bonus = extras.get_bonus("meat", hunger.meat)
+
+    player.character_mining_speed_modifier = mining_speed_bonus
+    player.character_crafting_speed_modifier = crafting_speed_bonus
+    player.force.laboratory_speed_modifier = research_speed_bonus
+    player.character_health_bonus = health_bonus
+    player.character_running_speed_modifier = running_speed_bonus
 end
 
 return extras
