@@ -5,13 +5,13 @@ local hungerbarsystem = {}
 function hungerbarsystem.save_gui_position(player)
     if player.gui.screen.hunger_gui then
         local position = player.gui.screen.hunger_gui.location
-        global.gui_positions[player.index] = {x = position.x, y = position.y}
+        storage.gui_positions[player.index] = {x = position.x, y = position.y}
     end
 end
 
 -- Restore GUI position
 local function restore_gui_position(player, frame)
-    local position = global.gui_positions[player.index]
+    local position = storage.gui_positions[player.index]
     if position then
         frame.location = {x = position.x, y = position.y}
     end
@@ -20,7 +20,8 @@ end
 local function update_bar_tooltip(bar, name, value)
     local bonus = extras.get_bonus(name, value)
     local stat_name = extras.get_stat_name(name)
-    bar.tooltip = string.format("%s: %.1f%%\nBonus: %.1f%%\nEffect: %s", name:gsub("^%l", string.upper), value, bonus, stat_name)
+    local full_bonus_text = "+50% Bonus at Full"
+    bar.tooltip = string.format("%s: %.1f%%\n%s\nEffect: %s", name:gsub("^%l", string.upper), value, full_bonus_text, stat_name)
 end
 
 function hungerbarsystem.create_hunger_gui(player)
@@ -73,8 +74,8 @@ function hungerbarsystem.create_hunger_gui(player)
         size = 100
     }
     overall_bar.style.color = {r = 0, g = 1, b = 0}
-    overall_bar.value = global.player_hunger_data[player.index].overall / 100
-    update_bar_tooltip(overall_bar, "overall", global.player_hunger_data[player.index].overall)
+    overall_bar.value = storage.player_hunger_data[player.index].overall / 100
+    update_bar_tooltip(overall_bar, "overall", storage.player_hunger_data[player.index].overall)
 
     -- Food group bars
     local food_groups = {
@@ -98,8 +99,48 @@ function hungerbarsystem.create_hunger_gui(player)
             size = 100
         }
         group_bar.style.color = group.color
-        group_bar.value = global.player_hunger_data[player.index][group.name] / 100
-        update_bar_tooltip(group_bar, group.name, global.player_hunger_data[player.index][group.name])
+        group_bar.value = storage.player_hunger_data[player.index][group.name] / 100
+        update_bar_tooltip(group_bar, group.name, storage.player_hunger_data[player.index][group.name])
+    end
+
+    -- Buffs section
+    main_frame.add {type = "line"}
+
+    local buffs_frame = main_frame.add {
+        type = "frame",
+        name = "buffs_frame",
+        caption = "Active Buffs",
+        direction = "vertical"
+    }
+
+    -- Display active buffs
+    local buffs_table = buffs_frame.add {
+        type = "table",
+        name = "buffs_table",
+        column_count = 2
+    }
+
+    local hunger = storage.player_hunger_data[player.index]
+    local active_buffs = {
+        {group = "Dairy", name = "Mining Speed", value = extras.get_bonus("dairy", hunger.dairy)},
+        {group = "Fruits", name = "Crafting Speed", value = extras.get_bonus("fruits", hunger.fruits)},
+        {group = "Veggies", name = "Research Speed", value = extras.get_bonus("veggies", hunger.veggies)},
+        {group = "Carbs", name = "Health Bonus", value = extras.get_bonus("carbs", hunger.carbs)},
+        {group = "Meat", name = "Running Speed", value = extras.get_bonus("meat", hunger.meat)}
+    }
+
+    for _, buff in ipairs(active_buffs) do
+        buffs_table.add {
+            type = "label",
+            caption = string.format("%s (%s):", buff.name, buff.group),
+            style = "label"
+        }
+
+        buffs_table.add {
+            type = "label",
+            caption = string.format("%.1f%%", buff.value * 100),
+            style = "label"
+        }
     end
 end
 

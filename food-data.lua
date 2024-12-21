@@ -1,4 +1,6 @@
 -- FRUITS
+-- FRUITS
+-- FRUITS
 local food_data = {
     ["apple"] = {
         hunger = 2,  -- Overall hunger increase
@@ -393,6 +395,258 @@ local food_data = {
         meat = 0
     },
 
+ --VEGGIES
+ --VEGGIES
+ --VEGGIES
+
+ ["artichoke"] = {
+    hunger = 2,  -- Overall hunger increase
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["asparagus"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 1,
+    meat = 0
+},
+["beetroot"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 2,
+    meat = 0
+},
+["bell_pepper"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["broccoli"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 7,
+    carbs = 1,
+    meat = 0
+},
+["brussels_sprout"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 1,
+    meat = 0
+},
+["cabbage"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 1,
+    meat = 0
+},
+["carrot"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 2,
+    meat = 0
+},
+["cauliflower"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 1,
+    meat = 0
+},
+["celery"] = {
+    hunger = 1,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 0,
+    meat = 0
+},
+["chayote"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["corn"] = {
+    hunger = 4,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 3,
+    meat = 0
+},
+["cucumber"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["daikon"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 2,
+    meat = 0
+},
+["eggplant"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["garlic"] = {
+    hunger = 1,
+    dairy = 0,
+    fruits = 0,
+    veggies = 3,
+    carbs = 1,
+    meat = 0
+},
+["jicama"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 2,
+    meat = 0
+},
+["kale"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 0,
+    meat = 0
+},
+["leek"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["lettuce"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 0,
+    meat = 0
+},
+["okra"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["onion"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+},
+["parsnip"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 2,
+    meat = 0
+},
+["pea"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 2,
+    meat = 0
+},
+["potato"] = {
+    hunger = 5,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 5,
+    meat = 0
+},
+["pumpkin"] = {
+    hunger = 4,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 3,
+    meat = 0
+},
+["soybeans"] = {
+    hunger = 4,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 2,
+    meat = 0
+},
+["spinach"] = {
+    hunger = 2,
+    dairy = 0,
+    fruits = 0,
+    veggies = 6,
+    carbs = 1,
+    meat = 0
+},
+["sweet_potato"] = {
+    hunger = 5,
+    dairy = 0,
+    fruits = 0,
+    veggies = 4,
+    carbs = 5,
+    meat = 0
+},
+["turnip"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 2,
+    meat = 0
+},
+["zucchini"] = {
+    hunger = 3,
+    dairy = 0,
+    fruits = 0,
+    veggies = 5,
+    carbs = 1,
+    meat = 0
+}
 
 
     -- Add more food items as needed

@@ -4,21 +4,20 @@ local hungerbarsystem = require("hungerbarsystem")
 local eatgui = require("eatgui")
 local food_data = require("food-data")
 
--- Function to ensure global tables are initialized
-local function ensure_global_tables()
-    if not global then global = {} end
-    if not global.player_hunger_data then global.player_hunger_data = {} end
-    if not global.gui_positions then global.gui_positions = {} end
+-- Ensure storage tables are initialized
+local function ensure_storage_tables()
+    storage.player_hunger_data = storage.player_hunger_data or {}
+    storage.gui_positions = storage.gui_positions or {}
 end
 
--- Ensure global tables are initialized in on_init
+-- Ensure storage tables are initialized in on_init
 script.on_init(function()
-    ensure_global_tables()
+    ensure_storage_tables()
 end)
 
 -- Initialize player hunger data
 local function initialize_player_hunger(player_index)
-    global.player_hunger_data[player_index] = {
+    storage.player_hunger_data[player_index] = {
         overall = 100,
         dairy = 100,
         fruits = 100,
@@ -30,11 +29,11 @@ end
 
 -- Event: Player Created or Joined
 script.on_event({defines.events.on_player_created, defines.events.on_player_joined_game}, function(event)
-    ensure_global_tables()
+    ensure_storage_tables()
     local player = game.players[event.player_index]
 
     -- Initialize or re-localize player hunger
-    if not global.player_hunger_data[player.index] then
+    if not storage.player_hunger_data[player.index] then
         initialize_player_hunger(player.index)
     end
 
@@ -44,7 +43,7 @@ end)
 
 -- Event: Player Picked Up or Dropped Food Item
 script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
-    ensure_global_tables()
+    ensure_storage_tables()
     local player = game.players[event.player_index]
     local cursor_stack = player.cursor_stack
 
@@ -70,37 +69,38 @@ script.on_event(defines.events.on_gui_click, function(event)
     if element.name:find("^eat_") then
         local _, amount, item_name = element.name:match("^(eat)_(%d*)_(.+)$")
 
-        if amount and item_name then
+        if amount == "stack" then
+            amount = player.get_item_count(item_name)
+        else
             amount = tonumber(amount) or 0
-            local stack_size = player.get_item_count(item_name)
+        end
 
-            if amount == 0 or amount > stack_size then
-                amount = stack_size
-            end
+        local stack_size = player.get_item_count(item_name)
 
-            if amount > 0 then
-                -- Handle food consumption
-                for _ = 1, amount do
-                    foodcontrol.consume_food(player.index, item_name)
-                end
+        if amount == 0 or amount > stack_size then
+            amount = stack_size
+        end
 
-                -- Remove items from player's inventory
-                player.remove_item({name = item_name, count = amount})
+        if amount > 0 and item_name then
+            -- Handle food consumption
+            foodcontrol.consume_multiple_food(player.index, item_name, amount)
 
-                -- Update the GUI
-                hungerbarsystem.create_hunger_gui(player)
-            else
-                game.print("Not enough " .. item_name .. " to consume.")
-            end
+            -- Remove items from player's inventory
+            player.remove_item({name = item_name, count = amount})
+
+            -- Update the GUI
+            hungerbarsystem.create_hunger_gui(player)
+        else
+            game.print("Not enough " .. item_name .. " to consume or invalid item.")
         end
     end
 end)
 
 -- Event: Update Hunger Bars Periodically
 script.on_nth_tick(3600, function()
-    ensure_global_tables()
+    ensure_storage_tables()
     for _, player in pairs(game.connected_players) do
-        local hunger = global.player_hunger_data[player.index]
+        local hunger = storage.player_hunger_data[player.index]
         
         if hunger then
             -- Decrease overall hunger
@@ -121,9 +121,9 @@ end)
 
 -- Apply stat bonuses periodically
 script.on_event(defines.events.on_tick, function(event)
-    ensure_global_tables()
+    ensure_storage_tables()
     for _, player in pairs(game.connected_players) do
-        local hunger = global.player_hunger_data[player.index]
+        local hunger = storage.player_hunger_data[player.index]
         if hunger and player.character then
             extras.apply_stat_bonuses(player, hunger)
         end
@@ -132,7 +132,7 @@ end)
 
 -- Event: Save GUI position before closing the game
 script.on_event(defines.events.on_gui_closed, function(event)
-    ensure_global_tables()
+    ensure_storage_tables()
     local player = game.players[event.player_index]
     hungerbarsystem.save_gui_position(player)
 end)
