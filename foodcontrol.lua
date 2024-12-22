@@ -45,7 +45,7 @@ function foodcontrol.consume_multiple_food(player_index, item_name, amount)
         local player = game.get_player(player_index)
         -- Print final status message after consuming multiple items
         local player_hunger = storage.player_hunger_data[player_index]
-        player.print({"foodtorio.hunger-levels-after-consume-multiple", amount, item_name})
+        player.print({"foodtorio.hunger-levels-after-consume-multiple", amount, "[item=".. item_name .. "]"})
         player.print({"foodtorio.hunger-overall", player_hunger.overall})
         player.print({"foodtorio.hunger-dairy", player_hunger.dairy})
         player.print({"foodtorio.hunger-fruits", player_hunger.fruits})
