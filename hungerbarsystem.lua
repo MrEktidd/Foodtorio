@@ -20,8 +20,8 @@ end
 local function update_bar_tooltip(bar, name, value)
     local bonus = extras.get_bonus(name, value)
     local stat_name = extras.get_stat_name(name)
-    local full_bonus_text = "+50% Bonus at Full"
-    bar.tooltip = string.format("%s: %.1f%%\n%s\nEffect: %s", name:gsub("^%l", string.upper), value, full_bonus_text, stat_name)
+    local full_bonus_text = {"foodtorio.bonus-at-full"}
+    bar.tooltip = {"foodtorio.hunger-bar-tooltip", name:gsub("^%l", string.upper), value, full_bonus_text, stat_name}
 end
 
 function hungerbarsystem.create_hunger_gui(player)
@@ -29,7 +29,7 @@ function hungerbarsystem.create_hunger_gui(player)
 
     -- Save the current position before destroying the old GUI
     hungerbarsystem.save_gui_position(player)
-    
+
     -- Remove existing GUI if present
     if screen.hunger_gui then
         screen.hunger_gui.destroy()
@@ -39,7 +39,7 @@ function hungerbarsystem.create_hunger_gui(player)
     local main_frame = screen.add {
         type = "frame",
         name = "hunger_gui",
-        caption = "Hunger Levels",
+        caption = {"foodtorio.hunger-gui-caption"},
         direction = "vertical"
     }
 
@@ -64,7 +64,7 @@ function hungerbarsystem.create_hunger_gui(player)
     -- Overall hunger bar
     bar_table.add {
         type = "label",
-        caption = "Hunger:",
+        caption = {"foodtorio.hunger-overall-label"},
         style = "caption_label"
     }
 
@@ -89,7 +89,7 @@ function hungerbarsystem.create_hunger_gui(player)
     for _, group in ipairs(food_groups) do
         bar_table.add {
             type = "label",
-            caption = group.name:gsub("^%l", string.upper),
+            caption = {"foodtorio.food-group-" .. group.name},
             style = "caption_label"
         }
 
@@ -109,7 +109,7 @@ function hungerbarsystem.create_hunger_gui(player)
     local buffs_frame = main_frame.add {
         type = "frame",
         name = "buffs_frame",
-        caption = "Active Buffs",
+        caption = {"foodtorio.buffs-gui-caption"},
         direction = "vertical"
     }
 
@@ -122,23 +122,23 @@ function hungerbarsystem.create_hunger_gui(player)
 
     local hunger = storage.player_hunger_data[player.index]
     local active_buffs = {
-        {group = "Dairy", name = "Mining Speed", value = extras.get_bonus("dairy", hunger.dairy)},
-        {group = "Fruits", name = "Crafting Speed", value = extras.get_bonus("fruits", hunger.fruits)},
-        {group = "Veggies", name = "Research Speed", value = extras.get_bonus("veggies", hunger.veggies)},
-        {group = "Carbs", name = "Health Bonus", value = extras.get_bonus("carbs", hunger.carbs)},
-        {group = "Meat", name = "Running Speed", value = extras.get_bonus("meat", hunger.meat)}
+        {group = "dairy", name = "mining-speed", value = extras.get_bonus("dairy", hunger.dairy)},
+        {group = "fruits", name = "crafting-speed", value = extras.get_bonus("fruits", hunger.fruits)},
+        {group = "veggies", name = "research-speed", value = extras.get_bonus("veggies", hunger.veggies)},
+        {group = "carbs", name = "health-bonus", value = extras.get_bonus("carbs", hunger.carbs)},
+        {group = "meat", name = "running-speed", value = extras.get_bonus("meat", hunger.meat)}
     }
 
     for _, buff in ipairs(active_buffs) do
         buffs_table.add {
             type = "label",
-            caption = string.format("%s (%s):", buff.name, buff.group),
+            caption = {"foodtorio.buff-display", buff.name, buff.group},
             style = "label"
         }
 
         buffs_table.add {
             type = "label",
-            caption = string.format("%.1f%%", buff.value * 100),
+            caption = {"foodtorio.percentage-format", buff.value * 100},
             style = "label"
         }
     end
