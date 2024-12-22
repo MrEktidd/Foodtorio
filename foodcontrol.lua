@@ -33,7 +33,7 @@ function foodcontrol.consume_food(player_index, item_name)
             end
         end
     else
-        game.print("Food item not found: " .. item_name)
+        game.print({"foodtorio.food-item-not-found", item_name})
     end
 end
 
@@ -45,15 +45,15 @@ function foodcontrol.consume_multiple_food(player_index, item_name, amount)
 
         -- Print final status message after consuming multiple items
         local player_hunger = storage.player_hunger_data[player_index]
-        game.print("Final hunger levels after consuming " .. amount .. " " .. item_name .. "(s):")
-        game.print("Overall: " .. player_hunger.overall)
-        game.print("Dairy: " .. player_hunger.dairy)
-        game.print("Fruits: " .. player_hunger.fruits)
-        game.print("Veggies: " .. player_hunger.veggies)
-        game.print("Carbs: " .. player_hunger.carbs)
-        game.print("Meat: " .. player_hunger.meat)
+        game.print({"foodtorio.hunger-levels-after-consume-multiple", amount, item_name})
+        game.print({"foodtorio.hunger-overall", player_hunger.overall})
+        game.print({"foodtorio.hunger-dairy", player_hunger.dairy})
+        game.print({"foodtorio.hunger-fruits", player_hunger.fruits})
+        game.print({"foodtorio.hunger-veggies", player_hunger.veggies})
+        game.print({"foodtorio.hunger-carbs", player_hunger.carbs})
+        game.print({"foodtorio.hunger-meat", player_hunger.meat})
     else
-        game.print("Invalid item or amount for consumption.")
+        game.print({"foodtorio.invalid-consumption"})
     end
 end
 
