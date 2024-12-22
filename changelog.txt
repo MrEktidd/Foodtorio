@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2024-12-22
+  Fixes:
+    - Fixed bug where eating ice cream caused error
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2024-12-21
+  Fixes:
+    - Various backend changes. Everything seems good. Please let me know if you encounter any issues.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.12
+Date: 2024-12-21
+  Fixes:
+    - Changed local descriptions to allow for alternate languages
+    - Added CN translation to Health bars and Eat menus
+---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 2024-12-21
   MAJOR UPDATE:

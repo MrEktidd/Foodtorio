@@ -69,6 +69,11 @@ script.on_event(defines.events.on_gui_click, function(event)
     if element.name:find("^eat_") then
         local _, amount, item_name = element.name:match("^(eat)_(%d*)_(.+)$")
 
+        if item_name == nil then
+            game.print("Error: Item name is nil.")
+            return
+        end
+
         if amount == "stack" then
             amount = player.get_item_count(item_name)
         else
@@ -81,7 +86,7 @@ script.on_event(defines.events.on_gui_click, function(event)
             amount = stack_size
         end
 
-        if amount > 0 and item_name then
+        if amount > 0 then
             -- Handle food consumption
             foodcontrol.consume_multiple_food(player.index, item_name, amount)
 
@@ -91,7 +96,7 @@ script.on_event(defines.events.on_gui_click, function(event)
             -- Update the GUI
             hungerbarsystem.create_hunger_gui(player)
         else
-            game.print("Not enough " .. item_name .. " to consume or invalid item.")
+            game.print({"message.not-enough-item", item_name})
         end
     end
 end)
