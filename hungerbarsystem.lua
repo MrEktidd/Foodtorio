@@ -132,7 +132,7 @@ function hungerbarsystem.create_hunger_gui(player)
     for _, buff in ipairs(active_buffs) do
         buffs_table.add {
             type = "label",
-            caption = {"foodtorio.buff-display", buff.name, buff.group},
+            caption = {"foodtorio.buff-display", {"foodtorio.buff-".. buff.name }, {"foodtorio.food-group-".. buff.group }},
             style = "label"
         }
 
