@@ -1,9 +1,19 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.0
-Date: 2024-12-17
+Version: 0.0.11
+Date: 2024-12-21
+  MAJOR UPDATE:
+    - THE HUNGER UPDATE!
+    - ALL Fruit and ALL Foodtorio edible foods have been configured to fill specific nutrition bars.
+    - Independent hunger bar refills from all foods, if hunger hits 0 you take damage.
+    - Independent nutrition bars based on the foods you eat. Low nutrition bars do not cause damage.
+    - Each full nutrition bar provide 50% multiplier to different stats, to make it worth consuming different foods
+    - Simply click a food item from your inventory to open the Eat GUI.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 2024-12-20
   Changes:
-    - Removed redundant jam/juice technology lock
-    - .
+    - Removed redundant tech locks
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2024-12-17
@@ -21,7 +31,7 @@ Date: 2024-12-17
     - Graphics Fixes
     - Formatting Fixes
   Content Added:
-    - Sushi Update! Now you can make sushi with sushi belts! 5 Types of rolls with more to come! 
+    - Sushi Update! Now you can make sushi with sushi belts! 5 Types of rolls with more to come!
     - Added Salmon, Smoked Salmon, Tuna, Smoked Tuna, Shrimp, Eel, Octopus, Squid, Roe, Crab, Crab Meat, Seaweed, Nori Sheets.
     - Added Mixed Sesame Seeds, Black Sesame Seeds, White Sesame Seeds, Ginger, Pickled Ginger, Yellowtail, Mackerel,
     - Added Salmon Roll, Tuna Roll, Shrimp Roll, California Roll, Eel Roll
